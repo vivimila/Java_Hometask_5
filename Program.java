@@ -4,7 +4,9 @@
 // 4. Пройти по коллекции и вывести значения в формате Фамилия инициалы "Иванов И.И."
 // 5. *Сортировать значения по возрасту и вывести отсортированную коллекция как в четвёртом пункте.
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class Program {
     public static void main(String args[]){
@@ -15,13 +17,11 @@ public class Program {
     hashMap.put(04,"Носков Олег Алексеевич 64 м");
     hashMap.put(05,"Васильева Ольга Николаевна 44 ж");
 
-    //this will remove the key-value pair where
-    //the value of the key is 101
-    hashMap.remove(101);
+      hashMap.replaceAll('м','М');
 
-    System.out.println("HashMap elements: ");
+         // System.out.println("HashMap elements: ");
     for(Map.Entry mEntry : hashMap.entrySet()){
-      System.out.print("key: "+ mEntry.getKey() + " & Value: ");
+      //System.out.print("key: "+ mEntry.getKey() + " & Value: ");
       System.out.println(mEntry.getValue());
     }
   }
